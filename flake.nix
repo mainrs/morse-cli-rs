@@ -48,6 +48,13 @@
             cargo-expand
             cargo-watch
           ];
+
+          buildInputs = with pkgs; [
+            alsa-lib
+          ];
+          nativeBuildInputs = with pkgs; [
+            pkg-config
+          ];
         };
       in rec {
         devShell = workspaceShell;
